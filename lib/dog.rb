@@ -63,11 +63,11 @@ class Dog
     binding.pry
   end
   
-  def self.update
-    UPDATE table_name
-    SET column1 = value1, column2 = value2, ...
-    WHERE condition;
+  # def self.update
+  #   UPDATE table_name
+  #   SET column1 = value1, column2 = value2, ...
+  #   WHERE condition;
     
-    DB[:conn].execute(
+  #   DB[:conn].execute(
   
 end 
