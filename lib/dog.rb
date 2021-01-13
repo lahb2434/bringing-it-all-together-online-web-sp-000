@@ -27,16 +27,18 @@ class Dog
   def save
     
     if self.id
+      self.update
+    else
+    
+      dog = <<-SQL 
+      INSERT INTO dogs (name, breed)
+      VALUES (?,?)
+      SQL
       
-    
-    dog = <<-SQL 
-    INSERT INTO dogs (name, breed)
-    VALUES (?,?)
-    SQL
-    
-    DB[:conn].execute(dog, self.name, self.breed)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
-    self
+      DB[:conn].execute(dog, self.name, self.breed)
+      @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
+      # self
+    end
   end
   
   def self.create(attributes)
