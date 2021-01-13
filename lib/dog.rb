@@ -43,7 +43,8 @@ class Dog
   end
   
   def self.new_from_db(pupper)
-    binding.pry
+    doggo = new(id: pupper[0], name: pupper[1], breed: pupper[2])
+    doggo
   end
   
   
