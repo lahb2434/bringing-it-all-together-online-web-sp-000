@@ -62,7 +62,7 @@ class Dog
       dog = doggo[0]
       pupper = Dog.new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
     end
-      pupper
+      # pupper
     # binding.pry
   end
   
