@@ -60,7 +60,7 @@ class Dog
       create(name: name, breed: breed)
     else 
       dog = doggo[0]
-      Dog.new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
+      new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
     end
       # pupper
     # binding.pry
