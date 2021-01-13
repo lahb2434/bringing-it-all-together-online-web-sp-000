@@ -50,9 +50,12 @@ class Dog
   def self.find_by_id(id)
     doggo = DB[:conn].execute('SELECT * FROM dogs WHERE id = ?', id)[0]
     new_from_db(doggo)
-    # binding.pry
+    
   end
   
+  def self.find_or_create_by()
+    
+  end
   
   
 end 
