@@ -63,6 +63,7 @@ class Dog
     binding.pry
   end
   
-  
+  def self.update
+    DB[:conn].execute(
   
 end 
