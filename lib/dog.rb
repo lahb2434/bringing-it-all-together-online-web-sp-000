@@ -60,10 +60,13 @@ class Dog
       create(name: name, breed: breed)
     else 
       dog = doggo[0]
-      new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
+      self.new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
     end
-      # pupper
-    # binding.pry
+      
+  end
+  
+  def self.find_or_create_by(name)
+    doggo = DB[:conn].execute('SELECT * FROM dogs WHERE name = ?', name)
   end
   
   # def self.update
