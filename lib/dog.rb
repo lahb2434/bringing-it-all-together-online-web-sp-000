@@ -57,9 +57,9 @@ class Dog
     doggo = DB[:conn].execute('SELECT * FROM dogs WHERE name = ? AND breed = ?', name, breed)
     
     if doggo.empty?
-      create(name: name, breed: breed)
+      pupper = create(name: name, breed: breed)
     else 
-      
+      pupper = Dog.new(id: ,name: ,breed: )
     end
       
     binding.pry
@@ -70,6 +70,6 @@ class Dog
   #   SET column1 = value1, column2 = value2, ...
   #   WHERE condition;
     
-  #   DB[:conn].execute(
+  #   DB[:conn].execute(id: ,
   
 end 
