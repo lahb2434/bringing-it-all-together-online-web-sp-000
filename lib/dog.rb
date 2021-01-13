@@ -57,10 +57,10 @@ class Dog
     doggo = DB[:conn].execute('SELECT * FROM dogs WHERE name = ? AND breed = ?', name, breed)
     
     if doggo.empty?
-      pupper = create(name: name, breed: breed)
+      create(name: name, breed: breed)
     else 
       dog = doggo[0]
-      pupper = Dog.new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
+      Dog.new(id: dog[0] ,name: dog[0] ,breed: dog[0] )
     end
       # pupper
     # binding.pry
