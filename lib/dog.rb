@@ -25,7 +25,10 @@ class Dog
   end
   
   def save
-    # binding.pry
+    
+    if self.id
+      
+    
     dog = <<-SQL 
     INSERT INTO dogs (name, breed)
     VALUES (?,?)
