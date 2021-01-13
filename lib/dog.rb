@@ -59,10 +59,10 @@ class Dog
     if doggo.empty?
       pupper = create(name: name, breed: breed)
     else 
-      pupper = Dog.new(id: ,name: ,breed: )
+      pupper = Dog.new(id: doggo[0] ,name: doggo[0] ,breed: doggo[0] )
     end
-      
-    binding.pry
+      pupper
+    # binding.pry
   end
   
   # def self.update
